@@ -29,22 +29,10 @@
  var app = express();
  var port = 8080;
 
-
+ //route our app
+ var router = require('./app/routes');
+ app.use('/',router);
 //start the server
 app.listen(port,function() {
 	console.log('app started');
 });
-
-//route for home page
-app.get('/',function(req, res){
-	res.send('Are you accepting changies.....');
-});
-
-//route for about page
-
-app.get('/about',function(req, res){
-	res.send('Hello from about page');
-});
-
-app.get('/contact');
-app.post('/contact');
