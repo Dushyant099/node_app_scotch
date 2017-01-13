@@ -26,12 +26,20 @@
  * Server created using Expres
  */
  var express = require('express');
+ var expressLayouts = require('express-ejs-layouts');
  var app = express();
  var port = 8080;
 
+
+ //set our view engine to ejs
+  app.set('view engine', 'ejs');
+
+  app.use(expressLayouts);
+  
  //route our app
  var router = require('./app/routes');
  app.use('/',router);
+
 
 //set static files like css, img
 

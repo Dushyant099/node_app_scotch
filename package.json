@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.5.5",
     "expres": "0.0.5",
+    "express-ejs-layouts": "^2.2.0",
     "nodemon": "^1.11.0"
   }
 }
